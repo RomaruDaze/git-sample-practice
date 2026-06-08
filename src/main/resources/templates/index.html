@@ -25,6 +25,13 @@
             <div th:each="article : ${articles}">
                 <p th:text=${article.name}></p>
                 <p th:text=${article.content}></p>
+                <form th:action="@{/comment/insert}" method="post">
+                    <input name="articleId" type="hidden" th:value=${article.id}>
+                    名前： <input name="name" type="text"><br>
+                    内容： <textarea name="content"></textarea>
+
+                    <button>送信</button>
+                </form>
                 <div th:each="comment : ${article.commentList}">
                     <p th:text=${comment.name}></p>
                     <p th:text=${comment.content}></p>

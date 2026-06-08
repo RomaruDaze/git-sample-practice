@@ -20,10 +20,12 @@ public class InsertCommentController {
     @Autowired
     private CommentRepository commentRepository;
 
-    @GetMapping("insert")
-    public void addComment(CommentForm commentForm) {
+    @PostMapping("insert")
+    public String addComment(CommentForm commentForm) {
         Comment comment = new Comment();
         BeanUtils.copyProperties(commentForm, comment);
+        System.out.println(comment);
         commentRepository.insert(comment);
+        return "redirect:/show-bbs";
     }
 }
