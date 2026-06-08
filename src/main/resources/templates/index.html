@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掲示板</title>
+</head>
+
+<body>
+
+    <head>
+        <h1>掲示板</h1>
+    </head>
+    <main>
+        <form th:action="@{/article/insert-article}" method="post">
+
+            名前： <input type="text"><br>
+            内容： <input type="text"><br>
+
+            <button>送信</button>
+        </form>
+        <br>
+        <div>
+            <div th:each="article : ${articles}">
+                <p th:text=${article.name}></p>
+                <p th:text=${article.content}></p>
+                <div>
+                    
+                </div>
+                <hr>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
