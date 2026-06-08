@@ -23,8 +23,7 @@ public class InsertArticleController {
      */
     @PostMapping("/insert-article")
     public String insertArticle(Article article) {
-
         articleRepository.insert(article);
-        return "redirect:/article";
+        return "redirect:/index";
     }
 }
