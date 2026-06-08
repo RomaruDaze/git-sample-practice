@@ -1,3 +1,19 @@
 spring:
   application:
     name: git-sample-practice
+  datasource:
+    url: jdbc:postgresql://localhost:5432/student?useUnicode=true&characterEncoding=utf8
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  session:
+    jdbc:
+      initialize-schema: always
+  sql:
+    init:
+      mode: always
+
+server:
+  servlet:
+    context-path: /bbs
