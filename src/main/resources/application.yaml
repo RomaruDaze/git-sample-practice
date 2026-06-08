@@ -1,3 +1,14 @@
 spring:
   application:
     name: git-sample-practice
+
+  session:
+    jdbc:
+      initialize-schema: always
+  sql:
+    init:
+      mode: always
+
+server:
+  servlet:
+    context-path: /bbs
