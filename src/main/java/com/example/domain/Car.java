@@ -5,6 +5,7 @@ package com.example.domain;
 @lombok.ToString
 public class Car {
     private Integer speed;
+    private String name;
     private String color;
     private Integer year;
 }
