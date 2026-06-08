@@ -22,10 +22,8 @@ public class ShowBbsController {
 
     @GetMapping("show-bbs")
     public String ShowBbs(Model model){
-        Article article = new Article();
-        
         model.addAttribute("articles", articleRepository.findAll());
-        model.addAttribute("comments",commentRepository.findByArticleId(art))
+        System.out.println(model.getAttribute("articles"));
         return "index";
     }
 }
