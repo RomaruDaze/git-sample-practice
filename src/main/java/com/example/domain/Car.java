@@ -6,4 +6,5 @@ package com.example.domain;
 public class Car {
     private Integer speed;
     private String color;
+    private Integer year;
 }
