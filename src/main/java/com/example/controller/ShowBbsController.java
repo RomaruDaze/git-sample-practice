@@ -23,7 +23,6 @@ public class ShowBbsController {
     @GetMapping("show-bbs")
     public String ShowBbs(Model model){
         model.addAttribute("articles", articleRepository.findAll());
-        System.out.println(model.getAttribute("articles"));
         return "index";
     }
 }

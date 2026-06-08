@@ -8,7 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class CommentForm {
-    private String articleId;
+    private Integer articleId;
     private String name;
     private String content;
 }
